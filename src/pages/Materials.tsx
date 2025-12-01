@@ -209,7 +209,7 @@ const Materials = () => {
             id={section.id}
             className="mb-20 scroll-mt-24"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-category">
               {section.title}
             </h2>
 
