@@ -288,12 +288,71 @@ const Materials = () => {
                       )}
                     </CardContent>
                   </Card>
-                ))}
-              </div>
-            )}
-          </section>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
+    </section>
+  ))}
+</div>
+
+      {/* Footer */}
+      <footer className="bg-muted mt-20 py-12 border-t border-border">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-6">
+            {/* Disclaimer */}
+            <div className="text-xs text-muted-foreground leading-relaxed">
+              <p>
+                ¹Este não é um alimento baixo em valor energético. Comparativo baseado em uma seleção dos principais competidores do mercado de gelatos artesanais que divulgam o nutricional em seu site e sorvetes premium vendidos no varejo. ²Os valores nutricionais do mercado foram calculados para refletir 100 g de produto de consumo. Para mais informações sobre os produtos Herbalife, consulte o catálogo ou acesse www.herbalife.com. Leia atentamente o rótulo antes de consumir os produtos.
+              </p>
+            </div>
+
+            {/* Company Info */}
+            <div className="text-sm text-foreground space-y-3">
+              <p className="font-semibold">
+                © 2025 Herbalife International do Brasil. Todos os direitos reservados.
+              </p>
+              <p>
+                Rua Werner Von Siemens, nº 111, Prédio 19 – Espaço 03 – 2° Andar, Lapa de Baixo, São Paulo – SP, CEP 05069-010
+              </p>
+              <p>
+                Departamento de Serviços ao Distribuidor Independente (11) 3879-7822 / 0300 100 0330 de seg à sex das 08h30 às 17h30 (horário de Brasília)
+              </p>
+              <p>
+                <a
+                  href="http://herbalife-econnect.hrbl.com/intelligentchannel/mainpage?countryid=BR&locale=pt_BR"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-category hover:underline"
+                >
+                  Clique aqui
+                </a>{" "}
+                para enviar sua dúvida pelo CANAL INTELIGENTE.
+              </p>
+            </div>
+
+            {/* Legal Links */}
+            <div className="flex flex-wrap gap-4 text-sm pt-4 border-t border-border">
+              <a
+                href="http://www.herbalife.com.br/termos-de-uso"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-category hover:underline font-medium"
+              >
+                TERMOS DE USO
+              </a>
+              <span className="text-muted-foreground">|</span>
+              <a
+                href="http://www.herbalife.com.br/politica-privacidade"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-category hover:underline font-medium"
+              >
+                POLÍTICA DE PRIVACIDADE
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
