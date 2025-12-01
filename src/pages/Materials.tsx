@@ -187,9 +187,9 @@ const Materials = () => {
                 <button
                   key={section.id}
                   onClick={() => scrollToSection(section.id)}
-                  className={`text-sm md:text-base font-medium transition-colors hover:text-primary ${
+                  className={`text-sm md:text-base font-medium transition-colors hover:text-category ${
                     activeSection === section.id
-                      ? "text-primary"
+                      ? "text-category"
                       : "text-muted-foreground"
                   }`}
                 >
@@ -278,7 +278,7 @@ const Materials = () => {
                             <Button
                               variant="default"
                               size="sm"
-                              className="w-full"
+                              className="w-full bg-category hover:bg-category/90 text-category-foreground"
                             >
                               <Download className="w-4 h-4 mr-2" />
                               Baixar Material
