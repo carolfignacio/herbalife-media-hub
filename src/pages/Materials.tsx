@@ -52,6 +52,12 @@ const Materials = () => {
         {
           title: "Vídeo Comunicação",
           youtubeId: "Z_4ClKtvwIc",
+          link: "https://drive.herbalifelifeon.com.br/index.php/s/ttuj6tmT2fzflgp?path=%2FProdutos%2FGELATO%20PROTEICO%2FVideos#/files_mediaviewer/Herbalife_LancamentoSorvete_V3.mp4",
+        },
+        {
+          title: "Apresentação",
+          thumb: "https://eventosepromoherbalife.com/wp-content/uploads/2025/12/Captura-de-tela-2025-12-02-183233.png",
+          link: "https://drive.herbalifelifeon.com.br/index.php/s/49RokBaQTnKJels",
         },
         {
           title: "Flyers",
@@ -79,6 +85,11 @@ const Materials = () => {
           title: "Folheto Impressão",
           thumb: "https://eventosepromoherbalife.com/wp-content/uploads/2025/12/folheto.png",
           link: "https://drive.herbalifelifeon.com.br/index.php/s/xIsAWGxp20cktmK",
+        },
+        {
+          title: "E-book",
+          thumb: "https://eventosepromoherbalife.com/wp-content/uploads/2025/12/Captura-de-tela-2025-12-02-204557.png",
+          link: "https://drive.herbalifelifeon.com.br/index.php/s/QMd1hr6re5O7yIu",
         },
       ],
     },
@@ -323,9 +334,25 @@ const Materials = () => {
                             />
                           </div>
                           <div className="p-4">
-                            <h3 className="font-semibold text-sm md:text-base">
+                            <h3 className="font-semibold text-sm md:text-base mb-3">
                               {material.title}
                             </h3>
+                            {material.link && (
+                              <a
+                                href={material.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <Button
+                                  variant="default"
+                                  size="sm"
+                                  className="w-full bg-category hover:bg-category/90 text-category-foreground"
+                                >
+                                  <Download className="w-4 h-4 mr-2" />
+                                  Baixar Vídeo
+                                </Button>
+                              </a>
+                            )}
                           </div>
                         </div>
                       ) : (
