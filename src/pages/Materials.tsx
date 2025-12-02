@@ -188,7 +188,7 @@ const Materials = () => {
               <img
                 src="https://eventosepromoherbalife.com/wp-content/uploads/2023/05/cropped-Picture1-2.png"
                 alt="Herbalife Logo"
-                className="h-12 md:h-16 w-auto"
+                className="h-8 md:h-10 w-auto"
               />
             </div>
 
