@@ -95,6 +95,11 @@ const Materials = () => {
           link: "https://drive.herbalifelifeon.com.br/index.php/s/vRyk2xfWW9mUdm9",
         },
         {
+          title: "Convite editável",
+          thumb: "https://eventosepromoherbalife.com/wp-content/uploads/2025/12/convitee.png",
+          link: "https://drive.herbalifelifeon.com.br/index.php/s/TPPGHzX3AZhy6aw",
+        },
+        {
           title: "Display de Mesa",
           thumb: "https://eventosepromoherbalife.com/wp-content/uploads/2025/12/convite.png",
           link: "https://drive.herbalifelifeon.com.br/index.php/s/rKOC642MOpDpmGr",
@@ -227,7 +232,7 @@ const Materials = () => {
               <div
                 className={`grid gap-6 ${
                   section.materials.some((m) => m.youtubeId)
-                    ? "grid-cols-1 lg:grid-cols-2"
+                    ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
                     : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
                 }`}
               >
