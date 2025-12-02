@@ -194,6 +194,15 @@ const Materials = () => {
 
             {/* Menu */}
             <div className="flex flex-wrap items-center gap-2 md:gap-4 ml-4">
+              <a
+                href="https://www.myherbalife.com/pt-BR/Shop/Catalog/Items/Search/Ds/10627?cmp=M_br_pt_website_gelato_externalsite_paggelato_20251202"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="sm" className="bg-category hover:bg-category/90 text-category-foreground">
+                  Compre aqui
+                </Button>
+              </a>
               {sections.map((section) => (
                 <button
                   key={section.id}
@@ -207,15 +216,6 @@ const Materials = () => {
                   {section.title}
                 </button>
               ))}
-              <a
-                href="https://www.myherbalife.com/pt-BR/Shop/Catalog/Items/Search/Ds/10627?cmp=M_br_pt_website_gelato_externalsite_paggelato_20251202"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button size="sm" className="bg-category hover:bg-category/90 text-category-foreground">
-                  Compre aqui
-                </Button>
-              </a>
             </div>
           </div>
         </div>
