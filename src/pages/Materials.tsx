@@ -43,6 +43,10 @@ const Materials = () => {
       title: "Comunicação",
       materials: [
         {
+          title: "Vídeo Comunicação",
+          youtubeId: "Z_4ClKtvwIc",
+        },
+        {
           title: "Flyers",
           thumb: "https://eventosepromoherbalife.com/wp-content/uploads/2025/12/flyers.jpg",
           link: "https://drive.herbalifelifeon.com.br/index.php/s/OKZKobKww1kK45B",
