@@ -14,6 +14,7 @@ interface Section {
   id: string;
   title: string;
   materials: Material[];
+  fullImage?: string;
 }
 
 const Materials = () => {
@@ -79,6 +80,7 @@ const Materials = () => {
       id: "promocao",
       title: "Promoção",
       materials: [],
+      fullImage: "/promocao-banner.png",
     },
     {
       id: "evs",
@@ -222,7 +224,15 @@ const Materials = () => {
               {section.title}
             </h2>
 
-            {section.materials.length === 0 ? (
+            {section.fullImage ? (
+              <div className="w-full">
+                <img
+                  src={section.fullImage}
+                  alt={section.title}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
+            ) : section.materials.length === 0 ? (
               <div className="text-center py-12 bg-muted rounded-lg">
                 <p className="text-muted-foreground text-lg">
                   Materiais em breve...
@@ -232,7 +242,7 @@ const Materials = () => {
               <div
                 className={`grid gap-6 items-start ${
                   section.materials.some((m) => m.youtubeId)
-                    ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+                    ? "grid-cols-1 lg:grid-cols-2"
                     : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
                 }`}
               >
@@ -298,9 +308,9 @@ const Materials = () => {
                     </CardContent>
                   </Card>
           ))}
-        </div>
-      )}
-    </section>
+              </div>
+            )}
+          </section>
   ))}
 </div>
 
