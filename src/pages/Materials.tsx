@@ -230,7 +230,7 @@ const Materials = () => {
               </div>
             ) : (
               <div
-                className={`grid gap-6 ${
+                className={`grid gap-6 items-start ${
                   section.materials.some((m) => m.youtubeId)
                     ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
                     : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
