@@ -181,7 +181,7 @@ const Materials = () => {
 
       {/* Sticky Navigation */}
       <nav className="sticky top-0 z-50 bg-card border-b border-border shadow-md">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-2">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex-shrink-0">
