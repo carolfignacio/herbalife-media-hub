@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Download, ExternalLink } from "lucide-react";
+import { Download, Menu } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 interface Material {
   title: string;
@@ -19,6 +24,7 @@ interface Section {
 
 const Materials = () => {
   const [activeSection, setActiveSection] = useState("");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const sections: Section[] = [
     {
@@ -192,8 +198,8 @@ const Materials = () => {
               />
             </div>
 
-            {/* Menu */}
-            <div className="flex flex-wrap items-center gap-2 md:gap-4 ml-4">
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center gap-4 ml-4">
               <a
                 href="https://www.myherbalife.com/pt-BR/Shop/Catalog/Items/Search/Ds/10627?cmp=M_br_pt_website_gelato_externalsite_paggelato_20251202"
                 target="_blank"
@@ -207,7 +213,7 @@ const Materials = () => {
                 <button
                   key={section.id}
                   onClick={() => scrollToSection(section.id)}
-                  className={`text-sm md:text-base font-medium transition-colors hover:text-category ${
+                  className={`text-base font-medium transition-colors hover:text-category ${
                     activeSection === section.id
                       ? "text-category"
                       : "text-muted-foreground"
@@ -216,6 +222,46 @@ const Materials = () => {
                   {section.title}
                 </button>
               ))}
+            </div>
+
+            {/* Mobile Menu */}
+            <div className="flex md:hidden items-center gap-2">
+              <a
+                href="https://www.myherbalife.com/pt-BR/Shop/Catalog/Items/Search/Ds/10627?cmp=M_br_pt_website_gelato_externalsite_paggelato_20251202"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="sm" className="bg-category hover:bg-category/90 text-category-foreground">
+                  Compre aqui
+                </Button>
+              </a>
+              <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <Menu className="h-5 w-5" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-[280px]">
+                  <div className="flex flex-col gap-4 mt-8">
+                    {sections.map((section) => (
+                      <button
+                        key={section.id}
+                        onClick={() => {
+                          scrollToSection(section.id);
+                          setMobileMenuOpen(false);
+                        }}
+                        className={`text-left text-lg font-medium transition-colors hover:text-category ${
+                          activeSection === section.id
+                            ? "text-category"
+                            : "text-muted-foreground"
+                        }`}
+                      >
+                        {section.title}
+                      </button>
+                    ))}
+                  </div>
+                </SheetContent>
+              </Sheet>
             </div>
           </div>
         </div>
