@@ -80,7 +80,7 @@ const Materials = () => {
       id: "promocao",
       title: "Promoção",
       materials: [],
-      fullImage: "/promocao-banner.png",
+      fullImage: "https://eventosepromoherbalife.com/wp-content/uploads/2025/12/Picture1.jpg",
     },
     {
       id: "evs",
