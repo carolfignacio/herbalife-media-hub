@@ -57,7 +57,7 @@ const Materials = () => {
         {
           title: "Apresentação",
           thumb: "https://eventosepromoherbalife.com/wp-content/uploads/2025/12/Captura-de-tela-2025-12-02-183233.png",
-          link: "https://drive.herbalifelifeon.com.br/index.php/s/49RokBaQTnKJels",
+          link: "https://drive.herbalifelifeon.com.br/index.php/s/ttuj6tmT2fzflgp?path=%2FProdutos%2FGELATO%20PROTEICO%2FApresenta%C3%A7%C3%A3o",
         },
         {
           title: "Flyers",
