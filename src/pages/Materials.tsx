@@ -141,7 +141,7 @@ const Materials = () => {
         {
           title: "Cavalete",
           thumb: "https://eventosepromoherbalife.com/wp-content/uploads/2025/12/cavalete.png",
-          link: "https://drive.herbalifelifeon.com.br/index.php/s/3qIdoJOp22YasiV",
+          link: "https://drive.herbalifelifeon.com.br/index.php/s/0WqISJwf2n2u4Jj",
         },
         {
           title: "Cartela de Fidelidade",
