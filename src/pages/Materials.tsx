@@ -75,6 +75,11 @@ const Materials = () => {
           thumb: "https://eventosepromoherbalife.com/wp-content/uploads/2025/12/videos.png",
           link: "https://drive.herbalifelifeon.com.br/index.php/s/OD8ROtsUWg34WiO",
         },
+        {
+          title: "Gifs/Figurinhas",
+          thumb: "https://eventosepromoherbalife.com/wp-content/uploads/2025/12/01-1.png",
+          link: "https://drive.herbalifelifeon.com.br/index.php/s/nht72f4E210TMF8",
+        },
       ],
     },
     {
