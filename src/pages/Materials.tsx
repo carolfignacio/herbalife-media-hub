@@ -52,7 +52,7 @@ const Materials = () => {
         {
           title: "Vídeo Comunicação",
           youtubeId: "Z_4ClKtvwIc",
-          link: "https://drive.herbalifelifeon.com.br/index.php/s/ttuj6tmT2fzflgp?path=%2FProdutos%2FGELATO%20PROTEICO%2FVideos#/files_mediaviewer/Herbalife_LancamentoSorvete_V3.mp4",
+          link: "https://drive.herbalifelifeon.com.br/index.php/s/DSqBfFcD7RThbLo",
         },
         {
           title: "Apresentação",
@@ -87,14 +87,9 @@ const Materials = () => {
       title: "Guias",
       materials: [
         {
-          title: "Folheto Impressão",
-          thumb: "https://eventosepromoherbalife.com/wp-content/uploads/2025/12/folheto.png",
-          link: "https://drive.herbalifelifeon.com.br/index.php/s/xIsAWGxp20cktmK",
-        },
-        {
-          title: "E-book",
+          title: "Guia Modos de Preparo",
           thumb: "https://eventosepromoherbalife.com/wp-content/uploads/2025/12/Captura-de-tela-2025-12-02-204557.png",
-          link: "https://drive.herbalifelifeon.com.br/index.php/s/QMd1hr6re5O7yIu",
+          link: "https://drive.herbalifelifeon.com.br/index.php/s/HNqFmwXznyOZGn1",
         },
       ],
     },
