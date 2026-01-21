@@ -43,6 +43,10 @@ const Materials = () => {
           title: "Modo de Preparo do Gelato Proteico Herbalife com Shake Fórmula 1 com Gelo",
           youtubeId: "5Pkc3ygTECc",
         },
+        {
+          title: "Como preparar o picolé proteico",
+          youtubeId: "nJoHpOYt9vs",
+        },
       ],
     },
     {
