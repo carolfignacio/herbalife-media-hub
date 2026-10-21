@@ -23,6 +23,7 @@ interface Material {
   youtubeId?: string;
   links?: MaterialLink[];
   thumbClassName?: string;
+  objectPosition?: string;
 }
 
 interface Section {
@@ -113,16 +114,19 @@ const Materials = () => {
         {
           title: "Cartaz",
           thumb: evsPoster.url,
+          objectPosition: "top",
           link: "https://drive.herbadrive.com/index.php/s/6ncJ9jhtP0rDIdh",
         },
         {
           title: "Convite",
           thumb: evsPoster.url,
+          objectPosition: "top",
           link: "https://drive.herbadrive.com/index.php/s/6ZrnPVhnXcJzkGk",
         },
         {
           title: "Convite editável",
           thumb: evsPoster.url,
+          objectPosition: "top",
           link: "https://drive.herbadrive.com/index.php/s/X2JLUJJWwHaW0HW",
         },
         {
@@ -143,6 +147,7 @@ const Materials = () => {
         {
           title: "Móbile",
           thumb: evsMobile.url,
+          objectPosition: "top",
           link: "https://drive.herbadrive.com/index.php/s/LKVs48N80d5vM9j",
         },
         {
@@ -423,6 +428,11 @@ const Materials = () => {
                               <img
                                 src={material.thumb}
                                 alt={material.title}
+                                style={
+                                  material.objectPosition
+                                    ? { objectPosition: material.objectPosition }
+                                    : undefined
+                                }
                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                               />
                             </div>
