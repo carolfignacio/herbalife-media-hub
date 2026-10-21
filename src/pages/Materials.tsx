@@ -341,6 +341,8 @@ const Materials = () => {
                 className={`grid gap-6 items-start ${
                   section.materials.length === 1
                     ? "grid-cols-1 mx-auto max-w-2xl"
+                    : section.materials.length === 2
+                    ? "grid-cols-1 md:grid-cols-2"
                     : section.materials.some((m) => m.youtubeId)
                     ? "grid-cols-1 lg:grid-cols-2"
                     : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
