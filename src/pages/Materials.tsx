@@ -32,20 +32,19 @@ const Materials = () => {
       title: "Modos de Preparo",
       materials: [
         {
-          title: "Modo de Preparo do Gelato Proteico Herbalife Simplificado com água",
-          youtubeId: "q0uQmMiDKvY",
-        },
-        {
-          title: "Modo de Preparo do Gelato Proteico Herbalife com Gelo",
-          youtubeId: "mkJRs4mKxP8",
-        },
-        {
-          title: "Modo de Preparo do Gelato Proteico Herbalife com Shake Fórmula 1 com Gelo",
-          youtubeId: "5Pkc3ygTECc",
-        },
-        {
-          title: "Como preparar o picolé proteico",
-          youtubeId: "nJoHpOYt9vs",
+          title: "A receita mais fácil de Protein Ice Cream",
+          thumb: gelatoThumb,
+          thumbClassName: "aspect-video",
+          links: [
+            {
+              label: "Modo de preparo Gelato",
+              url: "https://drive.herbadrive.com/index.php/s/tZwLar3VtD7MvJ3",
+            },
+            {
+              label: "Modo de preparo Gelato com shake (80/20)",
+              url: "https://drive.herbadrive.com/index.php/s/xDGbS0fqogBarNt",
+            },
+          ],
         },
       ],
     },
