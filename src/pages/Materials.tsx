@@ -41,7 +41,7 @@ const Materials = () => {
       materials: [
         {
           title: "A receita mais fácil de Protein Ice Cream",
-          thumb: gelatoThumb,
+          thumb: gelatoThumb.url,
           thumbClassName: "aspect-video",
           links: [
             {
