@@ -113,19 +113,16 @@ const Materials = () => {
         {
           title: "Cartaz",
           thumb: evsPoster.url,
-          thumbClassName: "aspect-[3/4]",
           link: "https://drive.herbadrive.com/index.php/s/6ncJ9jhtP0rDIdh",
         },
         {
           title: "Convite",
           thumb: evsPoster.url,
-          thumbClassName: "aspect-[3/4]",
           link: "https://drive.herbadrive.com/index.php/s/6ZrnPVhnXcJzkGk",
         },
         {
           title: "Convite editável",
           thumb: evsPoster.url,
-          thumbClassName: "aspect-[3/4]",
           link: "https://drive.herbadrive.com/index.php/s/X2JLUJJWwHaW0HW",
         },
         {
@@ -146,7 +143,6 @@ const Materials = () => {
         {
           title: "Móbile",
           thumb: evsMobile.url,
-          thumbClassName: "aspect-square",
           link: "https://drive.herbadrive.com/index.php/s/LKVs48N80d5vM9j",
         },
         {
