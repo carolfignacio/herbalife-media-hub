@@ -7,12 +7,20 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import gelatoThumb from "@/assets/Gelato-Thumb-1.jpg.asset.json";
+
+interface MaterialLink {
+  label: string;
+  url: string;
+}
 
 interface Material {
   title: string;
   thumb?: string;
   link?: string;
   youtubeId?: string;
+  links?: MaterialLink[];
+  thumbClassName?: string;
 }
 
 interface Section {
@@ -32,20 +40,19 @@ const Materials = () => {
       title: "Modos de Preparo",
       materials: [
         {
-          title: "Modo de Preparo do Gelato Proteico Herbalife Simplificado com água",
-          youtubeId: "q0uQmMiDKvY",
-        },
-        {
-          title: "Modo de Preparo do Gelato Proteico Herbalife com Gelo",
-          youtubeId: "mkJRs4mKxP8",
-        },
-        {
-          title: "Modo de Preparo do Gelato Proteico Herbalife com Shake Fórmula 1 com Gelo",
-          youtubeId: "5Pkc3ygTECc",
-        },
-        {
-          title: "Como preparar o picolé proteico",
-          youtubeId: "nJoHpOYt9vs",
+          title: "A receita mais fácil de Protein Ice Cream",
+          thumb: gelatoThumb.url,
+          thumbClassName: "aspect-video",
+          links: [
+            {
+              label: "Modo de preparo Gelato",
+              url: "https://drive.herbadrive.com/index.php/s/tZwLar3VtD7MvJ3",
+            },
+            {
+              label: "Modo de preparo Gelato com shake (80/20)",
+              url: "https://drive.herbadrive.com/index.php/s/xDGbS0fqogBarNt",
+            },
+          ],
         },
       ],
     },
@@ -305,7 +312,9 @@ const Materials = () => {
             ) : (
               <div
                 className={`grid gap-6 items-start ${
-                  section.materials.some((m) => m.youtubeId)
+                  section.materials.length === 1
+                    ? "grid-cols-1 mx-auto max-w-2xl"
+                    : section.materials.some((m) => m.youtubeId)
                     ? "grid-cols-1 lg:grid-cols-2"
                     : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
                 }`}
@@ -351,6 +360,48 @@ const Materials = () => {
                                 </Button>
                               </a>
                             )}
+                          </div>
+                        </div>
+                      ) : material.links ? (
+                        // Material with multiple links
+                        <div className="group">
+                          {material.thumb && (
+                            <div
+                              className={`${
+                                material.thumbClassName ?? "aspect-[4/3]"
+                              } overflow-hidden bg-muted`}
+                            >
+                              <img
+                                src={material.thumb}
+                                alt={material.title}
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                              />
+                            </div>
+                          )}
+                          <div className="p-4">
+                            <h3 className="font-semibold mb-3 text-sm md:text-base">
+                              {material.title}
+                            </h3>
+                            <div className="space-y-2">
+                              {material.links.map((linkItem) => (
+                                <a
+                                  key={linkItem.url}
+                                  href={linkItem.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="block"
+                                >
+                                  <Button
+                                    variant="default"
+                                    size="sm"
+                                    className="w-full bg-category hover:bg-category/90 text-category-foreground"
+                                  >
+                                    <Download className="w-4 h-4 mr-2" />
+                                    {linkItem.label}
+                                  </Button>
+                                </a>
+                              ))}
+                            </div>
                           </div>
                         </div>
                       ) : (
