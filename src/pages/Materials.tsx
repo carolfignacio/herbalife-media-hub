@@ -312,7 +312,9 @@ const Materials = () => {
             ) : (
               <div
                 className={`grid gap-6 items-start ${
-                  section.materials.some((m) => m.youtubeId)
+                  section.materials.length === 1
+                    ? "grid-cols-1 mx-auto max-w-2xl"
+                    : section.materials.some((m) => m.youtubeId)
                     ? "grid-cols-1 lg:grid-cols-2"
                     : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
                 }`}
@@ -358,6 +360,48 @@ const Materials = () => {
                                 </Button>
                               </a>
                             )}
+                          </div>
+                        </div>
+                      ) : material.links ? (
+                        // Material with multiple links
+                        <div className="group">
+                          {material.thumb && (
+                            <div
+                              className={`${
+                                material.thumbClassName ?? "aspect-[4/3]"
+                              } overflow-hidden bg-muted`}
+                            >
+                              <img
+                                src={material.thumb}
+                                alt={material.title}
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                              />
+                            </div>
+                          )}
+                          <div className="p-4">
+                            <h3 className="font-semibold mb-3 text-sm md:text-base">
+                              {material.title}
+                            </h3>
+                            <div className="space-y-2">
+                              {material.links.map((linkItem) => (
+                                <a
+                                  key={linkItem.url}
+                                  href={linkItem.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="block"
+                                >
+                                  <Button
+                                    variant="default"
+                                    size="sm"
+                                    className="w-full bg-category hover:bg-category/90 text-category-foreground"
+                                  >
+                                    <Download className="w-4 h-4 mr-2" />
+                                    {linkItem.label}
+                                  </Button>
+                                </a>
+                              ))}
+                            </div>
                           </div>
                         </div>
                       ) : (
