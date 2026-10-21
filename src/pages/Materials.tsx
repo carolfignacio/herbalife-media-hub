@@ -419,7 +419,11 @@ const Materials = () => {
                           className="block group"
                         >
                           {material.thumb && (
-                            <div className="aspect-[4/3] overflow-hidden bg-muted">
+                            <div
+                              className={`${
+                                material.thumbClassName ?? "aspect-[4/3]"
+                              } overflow-hidden bg-muted`}
+                            >
                               <img
                                 src={material.thumb}
                                 alt={material.title}
