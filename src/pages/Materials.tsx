@@ -8,6 +8,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import gelatoThumb from "@/assets/Gelato-Thumb-1.jpg.asset.json";
+import evsPoster from "@/assets/EVS-Gelato-Poster.png.asset.json";
+import evsMobile from "@/assets/EVS-Gelato-Mobile.png.asset.json";
 
 interface MaterialLink {
   label: string;
@@ -110,18 +112,21 @@ const Materials = () => {
       materials: [
         {
           title: "Cartaz",
-          thumb: "https://eventosepromoherbalife.com/wp-content/uploads/2025/12/cartaz-1.png",
-          link: "https://drive.herbalifelifeon.com.br/index.php/s/AavjBalSDYhEt0M",
+          thumb: evsPoster.url,
+          thumbClassName: "aspect-[3/4]",
+          link: "https://drive.herbadrive.com/index.php/s/6ncJ9jhtP0rDIdh",
         },
         {
           title: "Convite",
-          thumb: "https://eventosepromoherbalife.com/wp-content/uploads/2025/12/cartaz.png",
-          link: "https://drive.herbalifelifeon.com.br/index.php/s/vRyk2xfWW9mUdm9",
+          thumb: evsPoster.url,
+          thumbClassName: "aspect-[3/4]",
+          link: "https://drive.herbadrive.com/index.php/s/6ZrnPVhnXcJzkGk",
         },
         {
           title: "Convite editável",
-          thumb: "https://eventosepromoherbalife.com/wp-content/uploads/2025/12/convitee.png",
-          link: "https://drive.herbalifelifeon.com.br/index.php/s/TPPGHzX3AZhy6aw",
+          thumb: evsPoster.url,
+          thumbClassName: "aspect-[3/4]",
+          link: "https://drive.herbadrive.com/index.php/s/X2JLUJJWwHaW0HW",
         },
         {
           title: "Display de Mesa",
@@ -140,8 +145,9 @@ const Materials = () => {
         },
         {
           title: "Móbile",
-          thumb: "https://eventosepromoherbalife.com/wp-content/uploads/2025/12/mobile.png",
-          link: "https://drive.herbalifelifeon.com.br/index.php/s/72Fnq5cmG8sPvlb",
+          thumb: evsMobile.url,
+          thumbClassName: "aspect-square",
+          link: "https://drive.herbadrive.com/index.php/s/LKVs48N80d5vM9j",
         },
         {
           title: "Cavalete",
