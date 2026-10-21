@@ -7,12 +7,20 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import gelatoThumb from "@/assets/Gelato-Thumb-1.jpg.asset.json";
+
+interface MaterialLink {
+  label: string;
+  url: string;
+}
 
 interface Material {
   title: string;
   thumb?: string;
   link?: string;
   youtubeId?: string;
+  links?: MaterialLink[];
+  thumbClassName?: string;
 }
 
 interface Section {
