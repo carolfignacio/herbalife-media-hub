@@ -10,6 +10,8 @@ import {
 import gelatoThumb from "@/assets/Gelato-Thumb-1.jpg.asset.json";
 import evsPoster from "@/assets/EVS-Gelato-Poster.png.asset.json";
 import evsMobile from "@/assets/EVS-Gelato-Mobile.png.asset.json";
+import katiaThumb from "@/assets/HISTORIAS-Gelato-Katia.jpg.asset.json";
+import eduardaThumb from "@/assets/HISTORIAS-Gelato-Eduarda.jpg.asset.json";
 
 interface MaterialLink {
   label: string;
@@ -56,6 +58,24 @@ const Materials = () => {
               url: "https://drive.herbadrive.com/index.php/s/xDGbS0fqogBarNt",
             },
           ],
+        },
+      ],
+    },
+    {
+      id: "historias-sucesso",
+      title: "Histórias de Sucesso",
+      materials: [
+        {
+          title: "Histórias de Sucesso com Gelato Proteico - Katia",
+          thumb: katiaThumb.url,
+          thumbClassName: "aspect-video",
+          link: "https://drive.herbadrive.com/index.php/s/wLR2zTHGHXH5x5m#/files_mediaviewer/V%C3%ADdeo_Katia_Gelato_proteico_hist%C3%B3rias_sucesso_2026.mp4",
+        },
+        {
+          title: "Histórias de Sucesso com Gelato Proteico – Eduarda",
+          thumb: eduardaThumb.url,
+          thumbClassName: "aspect-video",
+          link: "https://drive.herbadrive.com/index.php/s/wLR2zTHGHXH5x5m#/files_mediaviewer/V%C3%ADdeo_Eduarda_Gelato_proteico_hist%C3%B3rias_sucesso_2026.mp4",
         },
       ],
     },
